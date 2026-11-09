@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#047857" />
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="#0B0F17" />
+  <circle cx="256" cy="256" r="180" fill="none" stroke="url(#grad)" stroke-width="24" stroke-dasharray="14 10" />
+  <circle cx="256" cy="256" r="140" fill="#111827" stroke="#10B981" stroke-width="8" />
+  <!-- Crescent & Star / Spiritual Compass Icon -->
+  <path d="M 280 180 C 230 180 190 220 190 270 C 190 320 230 360 280 360 C 245 340 225 305 225 270 C 225 235 245 200 280 180 Z" fill="#10B981" />
+  <polygon points="315,225 323,245 345,245 327,258 334,278 315,265 296,278 303,258 285,245 307,245" fill="#34D399" />
+</svg>
