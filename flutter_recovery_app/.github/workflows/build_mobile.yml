@@ -19,6 +19,11 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: 7.6.3
+
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -34,7 +39,8 @@ jobs:
         working-directory: ./flutter_recovery_app
         run: |
           if [ -f android/gradle/wrapper/gradle-wrapper.properties ]; then
-            sed -i 's|github.com/gradle/gradle-distributions/releases/download|services.gradle.org/distributions|g' android/gradle/wrapper/gradle-wrapper.properties
+            sed -i 's/gradle-7.6.3-all.zip/gradle-7.6.3-bin.zip/g' android/gradle/wrapper/gradle-wrapper.properties
+            sed -i 's|services.gradle.org/distributions|downloads.gradle-dn.com/distributions|g' android/gradle/wrapper/gradle-wrapper.properties
           fi
 
       - name: Install Dependencies
@@ -43,8 +49,7 @@ jobs:
 
       - name: Build Android APK
         working-directory: ./flutter_recovery_app
-        run: |
-          flutter build apk --debug || (sleep 10 && flutter build apk --debug)
+        run: flutter build apk --debug
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
