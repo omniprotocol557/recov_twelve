@@ -350,10 +350,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                 decoration: BoxDecoration(
-                  color: (score >= 70 ? const Color(0xFF10B981) : const Color(0xFFF59E0B)).withValues(alpha: 0.15),
+                  color: (score >= 70 ? const Color(0xFF10B981) : const Color(0xFFF59E0B)).withOpacity(0.15),
                   borderRadius: BorderRadius.circular(8),
                   border: Border.all(
-                    color: (score >= 70 ? const Color(0xFF10B981) : const Color(0xFFF59E0B)).withValues(alpha: 0.4),
+                    color: (score >= 70 ? const Color(0xFF10B981) : const Color(0xFFF59E0B)).withOpacity(0.4),
                   ),
                 ),
                 child: Text(
@@ -430,7 +430,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         decoration: BoxDecoration(
           color: const Color(0xFF131A26),
           borderRadius: BorderRadius.circular(22),
-          border: Border.all(color: const Color(0xFF0284C7).withValues(alpha: 0.3)),
+          border: Border.all(color: const Color(0xFF0284C7).withOpacity(0.3)),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

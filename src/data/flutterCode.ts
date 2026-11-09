@@ -1,4 +1,4 @@
-export const FLUTTER_CODE_FILES = [
+﻿export const FLUTTER_CODE_FILES = [
   {
     fileName: 'main.dart',
     title: 'نقطة الدخول وشريط التنقل السفلي والدرج الجانبي (Native Mobile Shell & Navigation)',
@@ -424,7 +424,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
               children: [
                 CircleAvatar(
                   radius: 26,
-                  backgroundColor: const Color(0xFF10B981).withValues(alpha: 0.2),
+                  backgroundColor: const Color(0xFF10B981).withOpacity(0.2),
                   child: const Icon(Icons.shield_rounded, color: Color(0xFF10B981), size: 30),
                 ),
                 const SizedBox(height: 10),
@@ -1047,10 +1047,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                 decoration: BoxDecoration(
-                  color: (score >= 70 ? const Color(0xFF10B981) : const Color(0xFFF59E0B)).withValues(alpha: 0.15),
+                  color: (score >= 70 ? const Color(0xFF10B981) : const Color(0xFFF59E0B)).withOpacity(0.15),
                   borderRadius: BorderRadius.circular(8),
                   border: Border.all(
-                    color: (score >= 70 ? const Color(0xFF10B981) : const Color(0xFFF59E0B)).withValues(alpha: 0.4),
+                    color: (score >= 70 ? const Color(0xFF10B981) : const Color(0xFFF59E0B)).withOpacity(0.4),
                   ),
                 ),
                 child: Text(
@@ -1127,7 +1127,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         decoration: BoxDecoration(
           color: const Color(0xFF131A26),
           borderRadius: BorderRadius.circular(22),
-          border: Border.all(color: const Color(0xFF0284C7).withValues(alpha: 0.3)),
+          border: Border.all(color: const Color(0xFF0284C7).withOpacity(0.3)),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -1393,7 +1393,7 @@ class Step10BottomSheet extends StatelessWidget {
           OutlinedButton.icon(
             style: OutlinedButton.styleFrom(
               foregroundColor: const Color(0xFF38BDF8),
-              side: const Color(0xFF0284C7),
+              side: const BorderSide(color: Color(0xFF0284C7)),
               padding: const EdgeInsets.symmetric(vertical: 14),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             ),
@@ -1452,7 +1452,7 @@ class Step10BottomSheet extends StatelessWidget {
                   ),
                   const SizedBox(width: 8),
                   IconButton.filled(
-                    style: IconButton.filled(backgroundColor: const Color(0xFF10B981)),
+                    style: IconButton.styleFrom(backgroundColor: const Color(0xFF10B981)),
                     icon: const Icon(Icons.add),
                     onPressed: () {
                       if (controller.text.isNotEmpty) {
@@ -2845,7 +2845,7 @@ class _Step11NightlyReviewScreenState extends State<Step11NightlyReviewScreen>
                         ),
                         const SizedBox(width: 8),
                         IconButton.filled(
-                          style: IconButton.filled(backgroundColor: const Color(0xFF10B981)),
+                          style: IconButton.styleFrom(backgroundColor: const Color(0xFF10B981)),
                           icon: const Icon(Icons.add),
                           onPressed: () {
                             _notifier.addGratitudeItem(_gratitudeController.text);
@@ -2910,7 +2910,7 @@ class _Step11NightlyReviewScreenState extends State<Step11NightlyReviewScreen>
                         ),
                         const SizedBox(width: 8),
                         IconButton.filled(
-                          style: IconButton.filled(backgroundColor: const Color(0xFF0284C7)),
+                          style: IconButton.styleFrom(backgroundColor: const Color(0xFF0284C7)),
                           icon: Icon(_isMeditating ? Icons.hourglass_bottom : Icons.play_arrow),
                           onPressed: _isMeditating ? null : _startMeditationTimer,
                         ),
@@ -3362,9 +3362,9 @@ class _ContactsDirectoryScreenState extends State<ContactsDirectoryScreen> {
         Container(
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: accentColor.withValues(alpha: 0.15),
+            color: accentColor.withOpacity(0.15),
             borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: accentColor.withValues(alpha: 0.3)),
+            border: Border.all(color: accentColor.withOpacity(0.3)),
           ),
           child: Icon(icon, color: accentColor, size: 20),
         ),
@@ -3401,10 +3401,10 @@ class _ContactsDirectoryScreenState extends State<ContactsDirectoryScreen> {
       decoration: BoxDecoration(
         color: const Color(0xFF131F2E),
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: const Color(0xFF10B981).withValues(alpha: 0.4), width: 1.5),
+        border: Border.all(color: const Color(0xFF10B981).withOpacity(0.4), width: 1.5),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF10B981).withValues(alpha: 0.08),
+            color: const Color(0xFF10B981).withOpacity(0.08),
             blurRadius: 18,
             offset: const Offset(0, 6),
           ),
@@ -3418,7 +3418,7 @@ class _ContactsDirectoryScreenState extends State<ContactsDirectoryScreen> {
             children: [
               CircleAvatar(
                 radius: 28,
-                backgroundColor: const Color(0xFF10B981).withValues(alpha: 0.2),
+                backgroundColor: const Color(0xFF10B981).withOpacity(0.2),
                 child: const Icon(Icons.shield_rounded, color: Color(0xFF10B981), size: 30),
               ),
               const SizedBox(width: 14),
@@ -3442,9 +3442,9 @@ class _ContactsDirectoryScreenState extends State<ContactsDirectoryScreen> {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                           decoration: BoxDecoration(
-                            color: const Color(0xFF10B981).withValues(alpha: 0.2),
+                            color: const Color(0xFF10B981).withOpacity(0.2),
                             borderRadius: BorderRadius.circular(8),
-                            border: Border.all(color: const Color(0xFF10B981).withValues(alpha: 0.4)),
+                            border: Border.all(color: const Color(0xFF10B981).withOpacity(0.4)),
                           ),
                           child: Text(
                             isAr ? 'الموجه الأول' : 'Lead Sponsor',
@@ -3559,7 +3559,7 @@ class _ContactsDirectoryScreenState extends State<ContactsDirectoryScreen> {
         children: [
           CircleAvatar(
             radius: 22,
-            backgroundColor: const Color(0xFF06B6D4).withValues(alpha: 0.15),
+            backgroundColor: const Color(0xFF06B6D4).withOpacity(0.15),
             child: const Icon(Icons.person_rounded, color: Color(0xFF06B6D4), size: 24),
           ),
           const SizedBox(width: 12),
@@ -3607,7 +3607,7 @@ class _ContactsDirectoryScreenState extends State<ContactsDirectoryScreen> {
                 icon: const Icon(Icons.phone_rounded, color: Color(0xFF10B981), size: 20),
                 tooltip: isAr ? 'اتصال' : 'Call',
                 style: IconButton.styleFrom(
-                  backgroundColor: const Color(0xFF10B981).withValues(alpha: 0.1),
+                  backgroundColor: const Color(0xFF10B981).withOpacity(0.1),
                 ),
               ),
               const SizedBox(width: 6),
@@ -3616,7 +3616,7 @@ class _ContactsDirectoryScreenState extends State<ContactsDirectoryScreen> {
                 icon: const Icon(Icons.chat_rounded, color: Color(0xFF06B6D4), size: 20),
                 tooltip: isAr ? 'محادثة' : 'Message',
                 style: IconButton.styleFrom(
-                  backgroundColor: const Color(0xFF06B6D4).withValues(alpha: 0.1),
+                  backgroundColor: const Color(0xFF06B6D4).withOpacity(0.1),
                 ),
               ),
               const SizedBox(width: 6),
@@ -4207,9 +4207,9 @@ class _AppLockScreenState extends State<AppLockScreen> with SingleTickerProvider
                   height: 80,
                   decoration: BoxDecoration(
                     color: _isSuccess
-                        ? const Color(0xFF10B981).withValues(alpha: 0.2)
+                        ? const Color(0xFF10B981).withOpacity(0.2)
                         : _isError
-                            ? const Color(0xFFEF4444).withValues(alpha: 0.2)
+                            ? const Color(0xFFEF4444).withOpacity(0.2)
                             : const Color(0xFF131A26),
                     borderRadius: BorderRadius.circular(24),
                     border: Border.all(
@@ -4634,7 +4634,7 @@ class SecuritySettingsScreen extends StatelessWidget {
       decoration: BoxDecoration(
         color: const Color(0xFF101928),
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: const Color(0xFF10B981).withValues(alpha: 0.3)),
+        border: Border.all(color: const Color(0xFF10B981).withOpacity(0.3)),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -4642,7 +4642,7 @@ class SecuritySettingsScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-              color: const Color(0xFF10B981).withValues(alpha: 0.15),
+              color: const Color(0xFF10B981).withOpacity(0.15),
               borderRadius: BorderRadius.circular(12),
             ),
             child: const Icon(Icons.shield_rounded, color: Color(0xFF10B981), size: 28),
@@ -4703,7 +4703,7 @@ class SecuritySettingsScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.between,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 isAr ? nameAr : nameEn,
@@ -4712,7 +4712,7 @@ class SecuritySettingsScreen extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF10B981).withValues(alpha: 0.15),
+                  color: const Color(0xFF10B981).withOpacity(0.15),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: const Text(

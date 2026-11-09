@@ -114,9 +114,9 @@ class _AppLockScreenState extends State<AppLockScreen> with SingleTickerProvider
                   height: 80,
                   decoration: BoxDecoration(
                     color: _isSuccess
-                        ? const Color(0xFF10B981).withValues(alpha: 0.2)
+                        ? const Color(0xFF10B981).withOpacity(0.2)
                         : _isError
-                            ? const Color(0xFFEF4444).withValues(alpha: 0.2)
+                            ? const Color(0xFFEF4444).withOpacity(0.2)
                             : const Color(0xFF131A26),
                     borderRadius: BorderRadius.circular(24),
                     border: Border.all(

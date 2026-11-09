@@ -128,9 +128,9 @@ class _ContactsDirectoryScreenState extends State<ContactsDirectoryScreen> {
         Container(
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: accentColor.withValues(alpha: 0.15),
+            color: accentColor.withOpacity(0.15),
             borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: accentColor.withValues(alpha: 0.3)),
+            border: Border.all(color: accentColor.withOpacity(0.3)),
           ),
           child: Icon(icon, color: accentColor, size: 20),
         ),
@@ -167,10 +167,10 @@ class _ContactsDirectoryScreenState extends State<ContactsDirectoryScreen> {
       decoration: BoxDecoration(
         color: const Color(0xFF131F2E),
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: const Color(0xFF10B981).withValues(alpha: 0.4), width: 1.5),
+        border: Border.all(color: const Color(0xFF10B981).withOpacity(0.4), width: 1.5),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF10B981).withValues(alpha: 0.08),
+            color: const Color(0xFF10B981).withOpacity(0.08),
             blurRadius: 18,
             offset: const Offset(0, 6),
           ),
@@ -184,7 +184,7 @@ class _ContactsDirectoryScreenState extends State<ContactsDirectoryScreen> {
             children: [
               CircleAvatar(
                 radius: 28,
-                backgroundColor: const Color(0xFF10B981).withValues(alpha: 0.2),
+                backgroundColor: const Color(0xFF10B981).withOpacity(0.2),
                 child: const Icon(Icons.shield_rounded, color: Color(0xFF10B981), size: 30),
               ),
               const SizedBox(width: 14),
@@ -208,9 +208,9 @@ class _ContactsDirectoryScreenState extends State<ContactsDirectoryScreen> {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                           decoration: BoxDecoration(
-                            color: const Color(0xFF10B981).withValues(alpha: 0.2),
+                            color: const Color(0xFF10B981).withOpacity(0.2),
                             borderRadius: BorderRadius.circular(8),
-                            border: Border.all(color: const Color(0xFF10B981).withValues(alpha: 0.4)),
+                            border: Border.all(color: const Color(0xFF10B981).withOpacity(0.4)),
                           ),
                           child: Text(
                             isAr ? 'الموجه الأول' : 'Lead Sponsor',
@@ -325,7 +325,7 @@ class _ContactsDirectoryScreenState extends State<ContactsDirectoryScreen> {
         children: [
           CircleAvatar(
             radius: 22,
-            backgroundColor: const Color(0xFF06B6D4).withValues(alpha: 0.15),
+            backgroundColor: const Color(0xFF06B6D4).withOpacity(0.15),
             child: const Icon(Icons.person_rounded, color: Color(0xFF06B6D4), size: 24),
           ),
           const SizedBox(width: 12),
@@ -373,7 +373,7 @@ class _ContactsDirectoryScreenState extends State<ContactsDirectoryScreen> {
                 icon: const Icon(Icons.phone_rounded, color: Color(0xFF10B981), size: 20),
                 tooltip: isAr ? 'اتصال' : 'Call',
                 style: IconButton.styleFrom(
-                  backgroundColor: const Color(0xFF10B981).withValues(alpha: 0.1),
+                  backgroundColor: const Color(0xFF10B981).withOpacity(0.1),
                 ),
               ),
               const SizedBox(width: 6),
@@ -382,7 +382,7 @@ class _ContactsDirectoryScreenState extends State<ContactsDirectoryScreen> {
                 icon: const Icon(Icons.chat_rounded, color: Color(0xFF06B6D4), size: 20),
                 tooltip: isAr ? 'محادثة' : 'Message',
                 style: IconButton.styleFrom(
-                  backgroundColor: const Color(0xFF06B6D4).withValues(alpha: 0.1),
+                  backgroundColor: const Color(0xFF06B6D4).withOpacity(0.1),
                 ),
               ),
               const SizedBox(width: 6),

@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'security_service.dart';
 
 class SecuritySettingsScreen extends StatelessWidget {
@@ -215,7 +215,7 @@ class SecuritySettingsScreen extends StatelessWidget {
       decoration: BoxDecoration(
         color: const Color(0xFF101928),
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: const Color(0xFF10B981).withValues(alpha: 0.3)),
+        border: Border.all(color: const Color(0xFF10B981).withOpacity(0.3)),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -223,7 +223,7 @@ class SecuritySettingsScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-              color: const Color(0xFF10B981).withValues(alpha: 0.15),
+              color: const Color(0xFF10B981).withOpacity(0.15),
               borderRadius: BorderRadius.circular(12),
             ),
             child: const Icon(Icons.shield_rounded, color: Color(0xFF10B981), size: 28),
@@ -284,7 +284,7 @@ class SecuritySettingsScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.between,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 isAr ? nameAr : nameEn,
@@ -293,7 +293,7 @@ class SecuritySettingsScreen extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF10B981).withValues(alpha: 0.15),
+                  color: const Color(0xFF10B981).withOpacity(0.15),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: const Text(

@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'spiritual_state.dart';
 
 class Step10BottomSheet extends StatelessWidget {
@@ -182,7 +182,7 @@ class Step10BottomSheet extends StatelessWidget {
           OutlinedButton.icon(
             style: OutlinedButton.styleFrom(
               foregroundColor: const Color(0xFF38BDF8),
-              side: const Color(0xFF0284C7),
+              side: const BorderSide(color: Color(0xFF0284C7)),
               padding: const EdgeInsets.symmetric(vertical: 14),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             ),
@@ -241,7 +241,7 @@ class Step10BottomSheet extends StatelessWidget {
                   ),
                   const SizedBox(width: 8),
                   IconButton.filled(
-                    style: IconButton.filled(backgroundColor: const Color(0xFF10B981)),
+                    style: IconButton.styleFrom(backgroundColor: const Color(0xFF10B981)),
                     icon: const Icon(Icons.add),
                     onPressed: () {
                       if (controller.text.isNotEmpty) {

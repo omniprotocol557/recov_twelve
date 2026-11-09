@@ -1,4 +1,4 @@
-﻿import 'dart:async';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'step11_models.dart';
 
@@ -439,7 +439,7 @@ class _Step11NightlyReviewScreenState extends State<Step11NightlyReviewScreen>
                         ),
                         const SizedBox(width: 8),
                         IconButton.filled(
-                          style: IconButton.filled(backgroundColor: const Color(0xFF10B981)),
+                          style: IconButton.styleFrom(backgroundColor: const Color(0xFF10B981)),
                           icon: const Icon(Icons.add),
                           onPressed: () {
                             _notifier.addGratitudeItem(_gratitudeController.text);
@@ -504,7 +504,7 @@ class _Step11NightlyReviewScreenState extends State<Step11NightlyReviewScreen>
                         ),
                         const SizedBox(width: 8),
                         IconButton.filled(
-                          style: IconButton.filled(backgroundColor: const Color(0xFF0284C7)),
+                          style: IconButton.styleFrom(backgroundColor: const Color(0xFF0284C7)),
                           icon: Icon(_isMeditating ? Icons.hourglass_bottom : Icons.play_arrow),
                           onPressed: _isMeditating ? null : _startMeditationTimer,
                         ),

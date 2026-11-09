@@ -420,7 +420,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
               children: [
                 CircleAvatar(
                   radius: 26,
-                  backgroundColor: const Color(0xFF10B981).withValues(alpha: 0.2),
+                  backgroundColor: const Color(0xFF10B981).withOpacity(0.2),
                   child: const Icon(Icons.shield_rounded, color: Color(0xFF10B981), size: 30),
                 ),
                 const SizedBox(height: 10),
