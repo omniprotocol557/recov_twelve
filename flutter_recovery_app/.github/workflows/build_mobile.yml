@@ -19,11 +19,6 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
-        with:
-          gradle-version: 7.6.3
-
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -40,6 +35,7 @@ jobs:
         run: |
           if [ -f android/gradle/wrapper/gradle-wrapper.properties ]; then
             sed -i 's/gradle-7.6.3-all.zip/gradle-7.6.3-bin.zip/g' android/gradle/wrapper/gradle-wrapper.properties
+            sed -i 's|github.com/gradle/gradle-distributions/releases/download|downloads.gradle-dn.com/distributions|g' android/gradle/wrapper/gradle-wrapper.properties
             sed -i 's|services.gradle.org/distributions|downloads.gradle-dn.com/distributions|g' android/gradle/wrapper/gradle-wrapper.properties
           fi
 
