@@ -30,13 +30,11 @@ jobs:
         working-directory: ./flutter_recovery_app
         run: flutter create --platforms=android,ios --org=com.recovery .
 
-      - name: Fix Gradle Distribution URL
+      - name: Optimize Gradle Wrapper URL
         working-directory: ./flutter_recovery_app
         run: |
           if [ -f android/gradle/wrapper/gradle-wrapper.properties ]; then
             sed -i 's/gradle-7.6.3-all.zip/gradle-7.6.3-bin.zip/g' android/gradle/wrapper/gradle-wrapper.properties
-            sed -i 's|github.com/gradle/gradle-distributions/releases/download|downloads.gradle-dn.com/distributions|g' android/gradle/wrapper/gradle-wrapper.properties
-            sed -i 's|services.gradle.org/distributions|downloads.gradle-dn.com/distributions|g' android/gradle/wrapper/gradle-wrapper.properties
           fi
 
       - name: Install Dependencies
