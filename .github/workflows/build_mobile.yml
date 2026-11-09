@@ -26,13 +26,17 @@ jobs:
           channel: 'stable'
           cache: true
 
+      - name: Generate Platform Files
+        working-directory: ./flutter_recovery_app
+        run: flutter create --platforms=android,ios --org=com.recovery .
+
       - name: Install Dependencies
         working-directory: ./flutter_recovery_app
         run: flutter pub get
 
-      - name: Build Android APK (Release)
+      - name: Build Android APK
         working-directory: ./flutter_recovery_app
-        run: flutter build apk --split-per-abi --release || flutter build apk --debug
+        run: flutter build apk --debug
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
@@ -54,11 +58,15 @@ jobs:
           channel: 'stable'
           cache: true
 
+      - name: Generate Platform Files
+        working-directory: ./flutter_recovery_app
+        run: flutter create --platforms=android,ios --org=com.recovery .
+
       - name: Install Dependencies
         working-directory: ./flutter_recovery_app
         run: flutter pub get
 
-      - name: Build iOS (No Codesign)
+      - name: Build iOS
         working-directory: ./flutter_recovery_app
         run: flutter build ios --release --no-codesign
 

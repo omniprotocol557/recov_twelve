@@ -26,17 +26,23 @@ jobs:
           channel: 'stable'
           cache: true
 
+      - name: Generate Platform Files
+        working-directory: ./flutter_recovery_app
+        run: flutter create --platforms=android,ios --org=com.recovery .
+
       - name: Install Dependencies
+        working-directory: ./flutter_recovery_app
         run: flutter pub get
 
       - name: Build Android APK
+        working-directory: ./flutter_recovery_app
         run: flutter build apk --debug
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Android-APK
-          path: build/app/outputs/flutter-apk/*.apk
+          path: flutter_recovery_app/build/app/outputs/flutter-apk/*.apk
 
   build-ios:
     name: Build iOS App
@@ -52,13 +58,20 @@ jobs:
           channel: 'stable'
           cache: true
 
+      - name: Generate Platform Files
+        working-directory: ./flutter_recovery_app
+        run: flutter create --platforms=android,ios --org=com.recovery .
+
       - name: Install Dependencies
+        working-directory: ./flutter_recovery_app
         run: flutter pub get
 
       - name: Build iOS
+        working-directory: ./flutter_recovery_app
         run: flutter build ios --release --no-codesign
 
       - name: Package Payload / IPA
+        working-directory: ./flutter_recovery_app
         run: |
           mkdir -p Payload
           cp -r build/ios/iphoneos/Runner.app Payload/
@@ -70,5 +83,5 @@ jobs:
         with:
           name: iOS-Package
           path: |
-            recovery_ios_app.ipa
-            Runner.app.zip
+            flutter_recovery_app/recovery_ios_app.ipa
+            flutter_recovery_app/Runner.app.zip
